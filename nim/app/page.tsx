@@ -19,6 +19,7 @@ import {
   EMAIL,
   SOCIAL_LINKS,
 } from './data'
+import { GlowEffect } from '@/components/motion-primitives/glow-effect';
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -162,7 +163,7 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on Full-Stack, Mobile, and AI Engineering. 
+            Focused on Full-Stack, Mobile, and AI/ML Engineering. 
           </p>
         </div>
       </motion.section>
@@ -281,13 +282,24 @@ export default function Personal() {
             {EMAIL}
           </a>
         </p>
-        <div className="flex items-center justify-start space-x-3">
-          {SOCIAL_LINKS.map((link) => (
-            <MagneticSocialLink key={link.label} link={link.link}>
-              {link.label}
-            </MagneticSocialLink>
-          ))}
-        </div>
+       <div className="flex items-center justify-start space-x-3">
+  {SOCIAL_LINKS.map((link) => (
+    <div key={link.label} className="relative">
+      <GlowEffect
+        colors={['#FF5733', '#33FF57', '#3357FF', '#F1C40F']}
+        mode='colorShift'
+        blur='soft'
+        duration={3}
+        scale={0.9}
+      />
+      <div className="relative">
+        <MagneticSocialLink link={link.link}>
+          {link.label}
+        </MagneticSocialLink>
+      </div>
+    </div>
+  ))}
+</div>
       </motion.section>
     </motion.main>
   )

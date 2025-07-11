@@ -1,6 +1,8 @@
 'use client'
 import { TextEffect } from '@/components/ui/text-effect'
 import Link from 'next/link'
+import { TextShimmerWave } from '@/components/motion-primitives/text-shimmer-wave';
+import './shimmer.css'
 
 export function Header() {
   return (
@@ -9,15 +11,18 @@ export function Header() {
         <Link href="/" className="font-medium text-black dark:text-white">
           Victor Tyler
         </Link>
-        <TextEffect
-          as="p"
-          preset="fade"
-          per="char"
-          className="text-zinc-600 dark:text-zinc-500"
-          delay={0.5}
-        >
-          Software Engineer
-        </TextEffect>
+        <div>
+        <TextShimmerWave
+      className='shimmer-custom'
+      duration={1}
+      spread={1}
+      zDistance={1}
+      scaleDistance={1.1}
+      rotateYDistance={20}
+    >
+      Software Engineer
+    </TextShimmerWave>
+        </div>
       </div>
     </header>
   )
