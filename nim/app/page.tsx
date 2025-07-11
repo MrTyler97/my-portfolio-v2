@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'motion/react'
 import { XIcon } from 'lucide-react'
-import { Spotlight } from '@/components/ui/spotlight'
+//import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import {
   MorphingDialog,
@@ -20,6 +20,8 @@ import {
   SOCIAL_LINKS,
 } from './data'
 import { GlowEffect } from '@/components/motion-primitives/glow-effect';
+import { BorderTrail } from '@/components/motion-primitives/border-trail';
+import { Spotlight } from '@/components/motion-primitives/spotlight';
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -45,9 +47,11 @@ type ProjectVideoProps = {
 }
 
 function ProjectVideo({ src }: ProjectVideoProps) {
-    const isYouTube = src.includes('youtube.com') || src.includes('youtu.be');
+  const isYouTube = src.includes('youtube.com') || src.includes('youtu.be');
+  const isImage = src.includes('.png') || src.includes('.jpg') || src.includes('.jpeg') || src.includes('.gif') || src.includes('.webp');
+  
   return (
- <MorphingDialog
+    <MorphingDialog
       transition={{
         type: 'spring',
         bounce: 0,
@@ -67,6 +71,12 @@ function ProjectVideo({ src }: ProjectVideoProps) {
               {/* Invisible overlay to capture clicks */}
               <div className="absolute inset-0 cursor-zoom-in" />
             </>
+          ) : isImage ? (
+            <img
+              src={src}
+              alt="Project preview"
+              className="aspect-video w-full cursor-zoom-in rounded-xl object-cover"
+            />
           ) : (
             <video
               src={src}
@@ -86,6 +96,12 @@ function ProjectVideo({ src }: ProjectVideoProps) {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="aspect-video h-[50vh] w-full rounded-xl md:h-[70vh]"
+            />
+          ) : isImage ? (
+            <img
+              src={src}
+              alt="Project preview"
+              className="aspect-video h-[50vh] w-full rounded-xl object-cover md:h-[70vh]"
             />
           ) : (
             <video
@@ -177,7 +193,11 @@ export default function Personal() {
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
+              <Spotlight
+                className='from-blue-600 via-blue-500 to-blue-400 blur-3xl dark:from-blue-200 dark:via-blue-300 dark:to-blue-400'
+                size={124}
+              />
+                <ProjectVideo src={project.media} />
               </div>
               <div className="px-1">
                 <a

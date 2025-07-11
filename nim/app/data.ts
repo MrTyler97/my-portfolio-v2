@@ -2,7 +2,8 @@ type Project = {
   name: string
   description: string
   link: string
-  video: string
+  media: string
+  mediaType: 'video' | 'image'
   id: string
 }
 
@@ -33,16 +34,18 @@ export const PROJECTS: Project[] = [
     description:
       'An interactive way to manage files. Users can preview files, view basic information about them, and rename them by utilizing a context aware AI assistant.',
     link: 'https://cosc481w-2025winter.github.io/KeepOrDelete/',
-    video:
+    media:
       'https://www.youtube.com/embed/eK3chz-iZYQ?autoplay=1&loop=1&playlist=eK3chz-iZYQ&mute=1',
+    mediaType: 'video',
     id: 'project1',
   },
   {
     name: 'Deep Neural Network Deployment',
-    description: 'Designed, trained, and deployed a 5-layer Multi Layer Perceptron on an Arduino Nano 33 BLE Sense board for real-time pulse-width modulation LED control.',
-    link: 'https://motion-primitives.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+    description: 'Designed, trained, and deployed a Multi Layer Perceptron on an Arduino Nano 33 BLE Sense board for real-time pulse-width modulation LED control via sine wave predictions.',
+    link: '',
+    media:
+      '/SineWave.png',
+    mediaType: 'image',
     id: 'project2',
   },
 ]
@@ -53,7 +56,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Software Engineer Intern',
     start: '2025',
     end: 'Present',
-    link: '',
+    link: 'https://www.honeywell.com/us/en',
     id: 'work1',
   },
   {
@@ -61,7 +64,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Research Assistant',
     start: '2024',
     end: '2025',
-    link: '',
+    link: 'https://www.emich.edu/cet/index.php',
     id: 'work2',
   },
   {
@@ -69,37 +72,31 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Teaching Assistant',
     start: '2023',
     end: '2024',
-    link: '',
+    link: 'https://www.emich.edu/cet/index.php',
     id: 'work3',
   },
 ]
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-    description: 'How AI is changing the way we design',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-1',
-  },
-  {
-    title: 'Why I left my job to start my own company',
+    title: 'Autonomus Drones, Yeast Cells, and Algorithms',
     description:
-      'A deep dive into my decision to leave my job and start my own company',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
-  },
-  {
-    title: 'What I learned from my first year of freelancing',
-    description:
-      'A look back at my first year of freelancing and what I learned',
+      'My various research experiences.',
     link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
     uid: 'blog-3',
   },
   {
-    title: 'How to Export Metadata from MDX for Next.js SEO',
-    description: 'A guide on exporting metadata from MDX files to leverage Next.js SEO features.',
-    link: '/blog/example-mdx-metadata',
-    uid: 'blog-4',
+    title: 'Why Computer Science?',
+    description: 'What led me to pursue a career in software engineering',
+    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    uid: 'blog-1',
+  },
+  {
+    title: 'National Society of Black Engineers',
+    description:
+      'How NSBE showed what I can be.',
+    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    uid: 'blog-2',
   },
 ]
 
