@@ -194,8 +194,8 @@ export default function Personal() {
             <div key={project.name} className="space-y-2">
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
               <Spotlight
-                className='from-blue-600 via-blue-500 to-blue-400 blur-3xl dark:from-blue-200 dark:via-blue-300 dark:to-blue-400'
-                size={124}
+                className='from-[#9da0a4] via-[#00ffb3] to-[#00ffb3] blur-3xl dark:from-[#9da0a4] dark:via-[#00ffb3] dark:to-[#00ffb3]'
+                size={175}
               />
                 <ProjectVideo src={project.media} />
               </div>
@@ -232,8 +232,8 @@ export default function Personal() {
               key={job.id}
             >
               <Spotlight
-                className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
-                size={64}
+                className='from-[#9da0a4] via-[#00ffb3] to-[#00ffb3] blur-3xl dark:from-[#9da0a4] dark:via-[#00ffb3] dark:to-[#00ffb3]'
+                size={128}
               />
               <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
                 <div className="relative flex w-full flex-row justify-between">
