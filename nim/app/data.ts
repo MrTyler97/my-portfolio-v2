@@ -82,7 +82,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Autonomus Drones, Yeast Cells, and Algorithms',
     description:
       'My various research experiences.',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    link: '/blog/my-various-research-experiences',
     uid: 'blog-3',
   },
   {
