@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
   },
   {
     name: 'Deep Neural Network Deployment',
-    description: 'Designed, trained, and deployed a Multi Layer Perceptron on an Arduino Nano 33 BLE Sense board for real-time pulse-width modulation LED control via sine wave predictions.',
+    description: 'Built and deployed an MLP model on Arduino Nano 33 BLE Sense to control LEDs in real-time using sine wave predictions.',
     link: '',
     media:
       '/SineWave.png',
