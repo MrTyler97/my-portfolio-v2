@@ -88,7 +88,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: 'Why Computer Science?',
     description: 'What led me to pursue a career in software engineering',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    link: '/blog/why-computer-science',
     uid: 'blog-1',
   },
   {
