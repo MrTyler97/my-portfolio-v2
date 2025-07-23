@@ -40,11 +40,11 @@ export const PROJECTS: Project[] = [
     id: 'project1',
   },
   {
-    name: 'Deep Neural Network Deployment',
+    name: 'Embedded DNN Sine Wave Predictor',
     description: 'Built and deployed an MLP model on Arduino Nano 33 BLE Sense to control LEDs in real-time using sine wave predictions.',
     link: '',
     media:
-      '/SineWave.png',
+      '/SineWave1.png',
     mediaType: 'image',
     id: 'project2',
   },
@@ -90,14 +90,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description: 'What led me to pursue a career in software engineering',
     link: '/blog/why-computer-science',
     uid: 'blog-1',
-  },
-  {
-    title: 'National Society of Black Engineers',
-    description:
-      'How NSBE showed what I can be.',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
-  },
+  }
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
