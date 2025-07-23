@@ -12,7 +12,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nim-fawn.vercel.app/'),
+  metadataBase: new URL('https://vltjr.com/'),
   alternates: {
     canonical: '/'
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     default: 'VLTJR - Portfolio',
     template: '%s | Vic'
   },
-  description:  'Nim is a free and open-source personal website template built with Next.js 15, React 19 and Motion-Primitives.',
+  description:  'Vic\'s Portfolio - Showcasing my journey as a software engineer, my projects, and my experiences in the tech industry.',
 };
 
 const geist = Geist({
