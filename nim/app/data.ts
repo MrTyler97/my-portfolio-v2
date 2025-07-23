@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
     description: 'Built and deployed an MLP model on Arduino Nano 33 BLE Sense to control LEDs in real-time using sine wave predictions.',
     link: '',
     media:
-      '/SineWave1.png',
+      '/SineWave.png',
     mediaType: 'image',
     id: 'project2',
   },
@@ -87,7 +87,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: 'Why Computer Science?',
-    description: 'What led me to pursue a career in software engineering',
+    description: 'What led me to pursue a career in software engineering.',
     link: '/blog/why-computer-science',
     uid: 'blog-1',
   }
