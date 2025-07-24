@@ -9,6 +9,7 @@ import {
   MorphingDialogContent,
   MorphingDialogClose,
   MorphingDialogContainer,
+  MorphingDialogImage,
 } from '@/components/ui/morphing-dialog'
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
@@ -72,7 +73,7 @@ function ProjectVideo({ src }: ProjectVideoProps) {
               <div className="absolute inset-0 cursor-zoom-in" />
             </>
           ) : isImage ? (
-            <img
+            <MorphingDialogImage
               src={src}
               alt="Project preview"
               className="aspect-video w-full cursor-zoom-in rounded-xl object-cover"
@@ -98,10 +99,11 @@ function ProjectVideo({ src }: ProjectVideoProps) {
               className="aspect-video h-[50vh] w-full rounded-xl md:h-[70vh]"
             />
           ) : isImage ? (
-            <img
+            
+            <MorphingDialogImage
               src={src}
               alt="Project preview"
-              className="aspect-video h-[50vh] w-full rounded-xl object-cover md:h-[70vh]"
+              className="aspect-video h-[70vh] w-full rounded-xl object-fill md:h-[70vh]"
             />
           ) : (
             <video
