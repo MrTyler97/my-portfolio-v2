@@ -21,6 +21,22 @@ export const metadata: Metadata = {
     template: '%s | Vic'
   },
   description:  'Vic\'s Portfolio - Showcasing my journey as a software engineer, my projects, and my experiences in the tech industry.',
+   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://vltjr.com/',
+    siteName: 'VLTJR Portfolio',
+    title: 'VLTJR - Portfolio',
+    description: 'Vic\'s Portfolio - Showcasing my journey as a software engineer, my projects, and my experiences in the tech industry.',
+    images: [
+      {
+        url: '/og.png', // or '/og-image.jpg'
+        width: 1200,
+        height: 630,
+        alt: 'VLTJR Portfolio Preview',
+      }
+    ],
+  },
 };
 
 const geist = Geist({
