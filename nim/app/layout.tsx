@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://vltjr.com/',
     siteName: 'VLTJR Portfolio',
-    title: 'VLTJR - Portfolio',
-    description: 'Vic\'s Portfolio - Showcasing my experiences in the tech industry.',
+    title: 'Vic\'s Portfolio',
+    description: 'Showcasing my experiences in the tech industry.',
     images: [
       {
         url: '/og.png', // or '/og-image.jpg'
