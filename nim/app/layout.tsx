@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     default: 'VLTJR - Portfolio',
     template: '%s | Vic'
   },
-  description:  'Vic\'s Portfolio - Showcasing my journey as a software engineer, my projects, and my experiences in the tech industry.',
+  description:  'Vic\'s Portfolio - Showcasing my experiences in the tech industry.',
    openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://vltjr.com/',
     siteName: 'VLTJR Portfolio',
     title: 'VLTJR - Portfolio',
-    description: 'Vic\'s Portfolio - Showcasing my journey as a software engineer, my projects, and my experiences in the tech industry.',
+    description: 'Vic\'s Portfolio - Showcasing my experiences in the tech industry.',
     images: [
       {
         url: '/og.png', // or '/og-image.jpg'
