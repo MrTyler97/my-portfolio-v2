@@ -2,7 +2,6 @@
 import { TextEffect } from '@/components/ui/text-effect'
 import Link from 'next/link'
 import { TextShimmerWave } from '@/components/motion-primitives/text-shimmer-wave';
-import './shimmer.css'
 
 export function Header() {
   return (

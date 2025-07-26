@@ -1,7 +1,6 @@
 'use client'
 import { motion } from 'motion/react'
 import { XIcon } from 'lucide-react'
-//import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import {
   MorphingDialog,
@@ -20,9 +19,11 @@ import {
   EMAIL,
   SOCIAL_LINKS,
 } from './data'
-import { GlowEffect } from '@/components/motion-primitives/glow-effect';
-import { BorderTrail } from '@/components/motion-primitives/border-trail';
-import { Spotlight } from '@/components/motion-primitives/spotlight';
+import { GlowEffect } from '@/components/motion-primitives/glow-effect'
+import { Spotlight } from '@/components/motion-primitives/spotlight'
+import { useState, useEffect } from 'react'
+import { TextMorph } from '@/components/ui/text-morph'
+import { TextLoop } from '@/components/ui/text-loop'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -48,9 +49,14 @@ type ProjectVideoProps = {
 }
 
 function ProjectVideo({ src }: ProjectVideoProps) {
-  const isYouTube = src.includes('youtube.com') || src.includes('youtu.be');
-  const isImage = src.includes('.png') || src.includes('.jpg') || src.includes('.jpeg') || src.includes('.gif') || src.includes('.webp');
-  
+  const isYouTube = src.includes('youtube.com') || src.includes('youtu.be')
+  const isImage =
+    src.includes('.png') ||
+    src.includes('.jpg') ||
+    src.includes('.jpeg') ||
+    src.includes('.gif') ||
+    src.includes('.webp')
+
   return (
     <MorphingDialog
       transition={{
@@ -67,7 +73,7 @@ function ProjectVideo({ src }: ProjectVideoProps) {
                 src={src}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="aspect-video w-full rounded-xl pointer-events-none"
+                className="pointer-events-none aspect-video w-full rounded-xl"
               />
               {/* Invisible overlay to capture clicks */}
               <div className="absolute inset-0 cursor-zoom-in" />
@@ -99,7 +105,6 @@ function ProjectVideo({ src }: ProjectVideoProps) {
               className="aspect-video h-[50vh] w-full rounded-xl md:h-[70vh]"
             />
           ) : isImage ? (
-            
             <MorphingDialogImage
               src={src}
               alt="Project preview"
@@ -168,6 +173,50 @@ function MagneticSocialLink({
 }
 
 export default function Personal() {
+  const [trigger, setTrigger] = useState(true)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTrigger((prev) => !prev)
+    }, 2000)
+
+    return () => clearInterval(interval)
+  }, [])
+  const blurSlideVariants = {
+    container: {
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: { staggerChildren: 0.01 },
+      },
+      exit: {
+        transition: { staggerChildren: 0.01, staggerDirection: 1 },
+      },
+    },
+    item: {
+      hidden: {
+        opacity: 0,
+        filter: 'blur(10px) brightness(0%)',
+        y: 0,
+      },
+      visible: {
+        opacity: 1,
+        y: 0,
+        filter: 'blur(0px) brightness(100%)',
+        transition: {
+          duration: 0.4,
+        },
+      },
+      exit: {
+        opacity: 0,
+        y: -30,
+        filter: 'blur(10px) brightness(0%)',
+        transition: {
+          duration: 0.4,
+        },
+      },
+    },
+  }
   return (
     <motion.main
       className="space-y-24"
@@ -181,7 +230,7 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on Full-Stack, Mobile, and AI/ML Engineering. 
+            Focused on Full-Stack, Mobile, and AI/ML Engineering.
           </p>
         </div>
       </motion.section>
@@ -195,10 +244,10 @@ export default function Personal() {
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-              <Spotlight
-                className='from-[#9da0a4] via-[#00ffb3] to-[#00ffb3] blur-3xl dark:from-[#9da0a4] dark:via-[#00ffb3] dark:to-[#00ffb3]'
-                size={175}
-              />
+                <Spotlight
+                  className="from-[#FF5733] to-[#3357FF] blur-3xl dark:from-[#FF5733] dark:to-[#3357FF]"
+                  size={175}
+                />
                 <ProjectVideo src={project.media} />
               </div>
               <div className="px-1">
@@ -208,7 +257,7 @@ export default function Personal() {
                   target="_blank"
                 >
                   {project.name}
-                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
+                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full dark:bg-zinc-50"></span>
                 </a>
                 <p className="text-base text-zinc-600 dark:text-zinc-400">
                   {project.description}
@@ -234,8 +283,8 @@ export default function Personal() {
               key={job.id}
             >
               <Spotlight
-                className='from-[#9da0a4] via-[#00ffb3] to-[#00ffb3] blur-3xl dark:from-[#9da0a4] dark:via-[#00ffb3] dark:to-[#00ffb3]'
-                size={128}
+                className="from-[#FF5733] to-[#3357FF] blur-3xl dark:from-[#FF5733] dark:to-[#3357FF]"
+                size={175}
               />
               <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
                 <div className="relative flex w-full flex-row justify-between">
@@ -293,6 +342,47 @@ export default function Personal() {
         </div>
       </motion.section>
 
+      {/*Resume section: Glow component. Nest Resume in glow component. On click (show), trigger glow and show resume. Click on resume to download*/}
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <div className="relative inline-block">
+          <div className="pointer-events-none absolute -inset-2">
+            <GlowEffect
+              colors={['#0894FF', '#C959DD', '#FF2E54', '#FF9004']}
+              mode="colorShift"
+              blur="medium"
+              duration={4}
+            />
+          </div>
+          <div className="relative flex flex-col items-start space-y-3 rounded-2xl border border-zinc-300/40 bg-zinc-100 p-6 dark:border-zinc-700/40 dark:bg-zinc-900">
+            <div className="flex items-center space-x-3">
+              <TextLoop className="text-xl font-medium text-zinc-950 dark:text-zinc-50">
+                <span>Impacts @ Honeywell</span>
+                <span>National Society of Black Engineers</span>
+                <span>Skills</span>
+              </TextLoop>
+            </div>
+            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+              View my resume to see my professional experience and skills.
+            </p>
+            <div className="flex items-center space-x-3">
+              <button
+                className="relative flex h-9 scale-100 appearance-none items-center justify-center overflow-hidden rounded-lg border border-zinc-950/10 bg-zinc-950 px-4 text-sm text-zinc-50 transition-all select-none hover:bg-zinc-800 focus-visible:ring-2 active:scale-[0.96] dark:border-zinc-50/10 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200"
+                type="button"
+                aria-label="View Resume"
+                onClick={() => {
+                  window.open('/Res.pdf', '_blank')
+                }}
+              >
+                <TextMorph>Resume</TextMorph>
+              </button>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
@@ -304,24 +394,24 @@ export default function Personal() {
             {EMAIL}
           </a>
         </p>
-       <div className="flex items-center justify-start space-x-3">
-  {SOCIAL_LINKS.map((link) => (
-    <div key={link.label} className="relative">
-      <GlowEffect
-        colors={['#FF5733', '#33FF57', '#3357FF', '#F1C40F']}
-        mode='colorShift'
-        blur='soft'
-        duration={3}
-        scale={0.9}
-      />
-      <div className="relative">
-        <MagneticSocialLink link={link.link}>
-          {link.label}
-        </MagneticSocialLink>
-      </div>
-    </div>
-  ))}
-</div>
+        <div className="flex items-center justify-start space-x-3">
+          {SOCIAL_LINKS.map((link) => (
+            <div key={link.label} className="relative">
+              <GlowEffect
+                colors={['#FF5733', '#33FF57', '#3357FF', '#F1C40F']}
+                mode="colorShift"
+                blur="soft"
+                duration={3}
+                scale={0.9}
+              />
+              <div className="relative">
+                <MagneticSocialLink link={link.link}>
+                  {link.label}
+                </MagneticSocialLink>
+              </div>
+            </div>
+          ))}
+        </div>
       </motion.section>
     </motion.main>
   )
