@@ -64,7 +64,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Research Assistant',
     start: '2024',
     end: '2025',
-    link: 'https://www.emich.edu/cet/index.php',
+    link: 'https://eas-lab-emich.github.io/',
     id: 'work2',
   },
   {
@@ -72,7 +72,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Teaching Assistant',
     start: '2023',
     end: '2024',
-    link: 'https://www.emich.edu/cet/index.php',
+    link: 'https://www.emich.edu/computer-science/index.php',
     id: 'work3',
   },
 ]
