@@ -352,14 +352,14 @@ export default function Personal() {
             <GlowEffect
               colors={['#0894FF', '#C959DD', '#FF2E54', '#FF9004']}
               mode="colorShift"
-              blur="medium"
-              duration={4}
+              blur="strongest"
+              duration={5}
             />
           </div>
           <div className="relative flex flex-col items-start space-y-3 rounded-2xl border border-zinc-300/40 bg-zinc-100 p-6 dark:border-zinc-700/40 dark:bg-zinc-900">
             <div className="flex items-center space-x-3">
               <TextLoop className="text-xl font-medium text-zinc-950 dark:text-zinc-50">
-                <span>Impacts @ Honeywell</span>
+                <span>Impact @ Honeywell</span>
                 <span>National Society of Black Engineers</span>
                 <span>Skills</span>
               </TextLoop>
@@ -373,10 +373,10 @@ export default function Personal() {
                 type="button"
                 aria-label="View Resume"
                 onClick={() => {
-                  window.open('/Res.pdf', '_blank')
+                  window.open('/Victor_T_Resume.pdf', '_blank')
                 }}
               >
-                <TextMorph>Resume</TextMorph>
+                <TextMorph>View</TextMorph>
               </button>
             </div>
           </div>
@@ -397,13 +397,6 @@ export default function Personal() {
         <div className="flex items-center justify-start space-x-3">
           {SOCIAL_LINKS.map((link) => (
             <div key={link.label} className="relative">
-              <GlowEffect
-                colors={['#FF5733', '#33FF57', '#3357FF', '#F1C40F']}
-                mode="colorShift"
-                blur="soft"
-                duration={3}
-                scale={0.9}
-              />
               <div className="relative">
                 <MagneticSocialLink link={link.link}>
                   {link.label}
