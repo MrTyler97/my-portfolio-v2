@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Showcasing my experiences in the tech industry.',
     images: [
       {
-        url: '/og.png', // or '/og-image.jpg'
+        url: '/Cards.jpeg', 
         width: 1200,
         height: 630,
         alt: 'VLTJR Portfolio Preview',
