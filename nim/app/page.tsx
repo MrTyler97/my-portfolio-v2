@@ -373,7 +373,7 @@ export default function Personal() {
                 type="button"
                 aria-label="View Resume"
                 onClick={() => {
-                  window.open('/Victor_T_Resume.pdf', '_blank')
+                  window.open('/Victor-SWE-Resume.pdf', '_blank')
                 }}
               >
                 <TextMorph>View</TextMorph>
