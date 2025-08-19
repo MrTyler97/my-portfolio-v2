@@ -29,6 +29,16 @@ type SocialLink = {
 }
 
 export const PROJECTS: Project[] = [
+    {
+    name: 'Database Reconfiguration Application',
+    description: 'Built a full-stack app that condenses database config workflows into single interface, accelerating Honeywell`s trade show deployments 75%',
+    link: '',
+    media:
+      '/Honeywell-Logo.wine.webp',
+    mediaType: 'image',
+    id: 'project3',
+
+  },
   {
     name: 'KeepOrDelete',
     description:
@@ -47,7 +57,7 @@ export const PROJECTS: Project[] = [
       '/SineWave.png',
     mediaType: 'image',
     id: 'project2',
-  },
+  }
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
@@ -55,7 +65,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     company: 'Honeywell',
     title: 'Software Engineer Intern',
     start: '2025',
-    end: 'Present',
+    end: '2025',
     link: 'https://www.honeywell.com/us/en',
     id: 'work1',
   },
