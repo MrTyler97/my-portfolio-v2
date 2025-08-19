@@ -33,11 +33,9 @@ export const PROJECTS: Project[] = [
     name: 'Database Reconfiguration Application',
     description: 'Built a full-stack app that condenses database config workflows into single interface, accelerating Honeywell`s trade show deployments 75%',
     link: '',
-    media:
-      '/Honeywell-Logo.wine.webp',
+    media:'/Honeywell-Logo.wine.webp',
     mediaType: 'image',
     id: 'project3',
-
   },
   {
     name: 'KeepOrDelete',
