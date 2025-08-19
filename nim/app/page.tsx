@@ -144,7 +144,7 @@ function ProjectVideo({ src }: ProjectVideoProps) {
     </MorphingDialog>
   )
 }
-export function ProjectsSection({ variants, transition }: { variants: any, transition: any }) {
+function ProjectsSection({ variants, transition }: { variants: any, transition: any }) {
   // Determine if we should use carousel on desktop based on project count
   const useDesktopCarousel = PROJECTS.length > 2
   
