@@ -80,7 +80,6 @@ function ProjectVideo({ src }: ProjectVideoProps) {
                 src={src}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                loading='lazy'
                 className="pointer-events-none aspect-video w-full rounded-xl"
               />
               {/* Invisible overlay to capture clicks */}
@@ -98,8 +97,6 @@ function ProjectVideo({ src }: ProjectVideoProps) {
               autoPlay
               loop
               muted
-              playsInline
-              preload='metadata'
               className="aspect-video w-full cursor-zoom-in rounded-xl"
             />
           )}
@@ -161,20 +158,16 @@ function ProjectsSection({ variants, transition }: { variants: any, transition: 
       {/* Mobile: Always Carousel View (single item) */}
       <div className="sm:hidden">
         <Carousel>
-          <CarouselContent className="ml-0">
+          <CarouselContent>
             {PROJECTS.map((project) => (
-              <CarouselItem key={project.name} className="pl-0 pr-4">
+              <CarouselItem key={project.name} className="p-1">
                 <div className="space-y-2">
-                  <div className="relative overflow-hidden rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                    <div className="pointer-events-none absolute inset-0">
+                  <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
                     <Spotlight
                       className="from-[#FF5733] to-[#3357FF] blur-3xl dark:from-[#FF5733] dark:to-[#3357FF]"
                       size={175}
                     />
-                    </div>
-                    <div className="relative">
-                      <ProjectVideo src={project.media} />
-                    </div>
+                    <ProjectVideo src={project.media} />
                   </div>
                   <div className="px-1">
                     <a
