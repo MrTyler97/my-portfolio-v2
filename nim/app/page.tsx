@@ -446,7 +446,7 @@ export default function Personal() {
               mode="colorShift"
               blur="strongest"
               duration={5}
-              scale={0.9}
+              scale={0.88}
             />
           </div>
           <div className="relative flex flex-col items-start space-y-3 rounded-2xl border border-zinc-300/40 bg-zinc-100 p-6 dark:border-zinc-700/40 dark:bg-zinc-900">
