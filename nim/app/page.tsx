@@ -442,9 +442,9 @@ export default function Personal() {
         <div className="relative inline-block">
           <div className="pointer-events-none absolute -inset-2">
             <GlowEffect
-              colors={['#0894FF', '#C959DD', '#FF2E54', '#FF9004']}
+              colors={['#0894FF', '#C959DD', '#ff2e2eff', '#04ff5cff']}
               mode="colorShift"
-              blur="strongest"
+              blur="strong"
               duration={5}
             />
           </div>
