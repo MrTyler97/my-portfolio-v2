@@ -445,8 +445,8 @@ export default function Personal() {
               colors={['#0894FF', '#C959DD', '#ff2e2eff', '#04ff5cff']}
               mode="colorShift"
               blur="strongest"
-              duration={3}
-              scale={0.95}
+              duration={5}
+              scale={0.9}
             />
           </div>
           <div className="relative flex flex-col items-start space-y-3 rounded-2xl border border-zinc-300/40 bg-zinc-100 p-6 dark:border-zinc-700/40 dark:bg-zinc-900">
