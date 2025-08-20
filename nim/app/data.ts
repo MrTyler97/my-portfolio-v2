@@ -1,7 +1,7 @@
 type Project = {
   name: string
   description: string
-  link: string
+  link?: string
   media: string
   mediaType: 'video' | 'image'
   id: string
@@ -30,12 +30,11 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
     {
-    name: 'Database Reconfiguration Application',
-    description: 'Built a full-stack app that condenses database config workflows into single interface, accelerating Honeywell`s trade show deployments 75%',
-    link: '',
+    name: 'Database Configuration Application',
+    description: 'Built a full-stack app that condenses database config workflows into a single interface, accelerating Honeywell`s trade show deployments by 75%',
     media:'/Honeywell-Logo.wine.webp',
     mediaType: 'image',
-    id: 'project3',
+    id: 'project1',
   },
   {
     name: 'KeepOrDelete',
@@ -45,16 +44,23 @@ export const PROJECTS: Project[] = [
     media:
       'https://www.youtube.com/embed/eK3chz-iZYQ?autoplay=1&loop=1&playlist=eK3chz-iZYQ&mute=1',
     mediaType: 'video',
-    id: 'project1',
+    id: 'project2',
   },
   {
     name: 'Embedded DNN Sine Wave Predictor',
     description: 'Built and deployed an MLP model on Arduino Nano 33 BLE Sense to control LEDs in real-time using sine wave predictions.',
-    link: '',
     media:
       '/SineWave.png',
     mediaType: 'image',
-    id: 'project2',
+    id: 'project3',
+  },
+  {
+    name: 'Guess The Flag',
+    description: 'Built an iOS guessing game where players identify country flags from multiple choices. It features score tracking and alert messages.',
+    media:
+      '/iOS_app.png',
+    mediaType: 'image',
+    id: 'project4',
   }
 ]
 

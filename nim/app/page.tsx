@@ -89,7 +89,7 @@ function ProjectVideo({ src }: ProjectVideoProps) {
             <MorphingDialogImage
               src={src}
               alt="Project preview"
-              className="aspect-video w-full cursor-zoom-in rounded-xl object-cover"
+              className="aspect-video w-full cursor-zoom-in rounded-xl object-contain"
             />
           ) : (
             <video
@@ -115,7 +115,7 @@ function ProjectVideo({ src }: ProjectVideoProps) {
             <MorphingDialogImage
               src={src}
               alt="Project preview"
-              className="aspect-video h-[70vh] w-full rounded-xl object-fill md:h-[70vh]"
+              className="aspect-video h-[70vh] w-full rounded-xl object-contain md:h-[70vh]"
             />
           ) : (
             <video
