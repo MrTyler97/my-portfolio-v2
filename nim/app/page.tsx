@@ -157,10 +157,10 @@ function ProjectsSection({ variants, transition }: { variants: any, transition: 
       
       {/* Mobile: Always Carousel View (single item) */}
       <div className="sm:hidden">
-        <Carousel>
+        <Carousel >
           <CarouselContent>
             {PROJECTS.map((project) => (
-              <CarouselItem key={project.name} className="p-1">
+              <CarouselItem key={project.name} className="px-1 py-5">
                 <div className="space-y-2">
                   <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
                     <Spotlight
@@ -198,7 +198,7 @@ function ProjectsSection({ variants, transition }: { variants: any, transition: 
           <Carousel>
             <CarouselContent>
               {PROJECTS.map((project) => (
-                <CarouselItem key={project.name} className="p-1 basis-1/2">
+                <CarouselItem key={project.name} className="px-1 py-5 basis-1/2">
                   <div className="space-y-2">
                     <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
                       <Spotlight
