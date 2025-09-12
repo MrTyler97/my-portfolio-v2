@@ -39,8 +39,8 @@ export const PROJECTS: Project[] = [
    {
     name: 'Coffee Rest',
     description: 'Built an iOS app the uses CoreML to show users their recommended bedtime based on their coffee intake, desired sleep duration, and preferred wake up time.',
-    media:
-      '/CoffeeRest.mov',
+    link: 'https://github.com/MrTyler97/Coffee-Rest',
+    media:'/CoffeeRest.mov',
     mediaType: 'video',
     id: 'project2',
   },
