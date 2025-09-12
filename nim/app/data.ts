@@ -36,6 +36,14 @@ export const PROJECTS: Project[] = [
     mediaType: 'image',
     id: 'project1',
   },
+   {
+    name: 'Coffee Rest',
+    description: 'Built an iOS app the uses CoreML to show users their recommended bedtime based on their coffee intake, desired sleep duration, and preferred wake up time.',
+    media:
+      '/CoffeeRest.mov',
+    mediaType: 'video',
+    id: 'project2',
+  },
   {
     name: 'KeepOrDelete',
     description:
@@ -44,7 +52,7 @@ export const PROJECTS: Project[] = [
     media:
       'https://www.youtube.com/embed/eK3chz-iZYQ?autoplay=1&loop=1&playlist=eK3chz-iZYQ&mute=1',
     mediaType: 'video',
-    id: 'project2',
+    id: 'project3',
   },
   {
     name: 'Embedded DNN Sine Wave Predictor',
@@ -52,16 +60,8 @@ export const PROJECTS: Project[] = [
     media:
       '/SineWave.png',
     mediaType: 'image',
-    id: 'project3',
-  },
-  {
-    name: 'Guess The Flag',
-    description: 'Built an iOS guessing game where players identify country flags from multiple choices. It features score tracking and alert messages.',
-    media:
-      '/iOS_app.png',
-    mediaType: 'image',
     id: 'project4',
-  }
+  },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
