@@ -163,10 +163,6 @@ function ProjectsSection({ variants, transition }: { variants: any, transition: 
               <CarouselItem key={project.name} className="px-1 py-5">
                 <div className="space-y-2">
                   <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                    <Spotlight
-                      className="from-[#FF5733] to-[#3357FF] blur-3xl dark:from-[#FF5733] dark:to-[#3357FF]"
-                      size={175}
-                    />
                     <ProjectVideo src={project.media} />
                   </div>
                   <div className="px-1">
@@ -201,10 +197,6 @@ function ProjectsSection({ variants, transition }: { variants: any, transition: 
                 <CarouselItem key={project.name} className="px-1 py-5 basis-1/2">
                   <div className="space-y-2">
                     <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                      <Spotlight
-                        className="from-[#FF5733] to-[#3357FF] blur-3xl dark:from-[#FF5733] dark:to-[#3357FF]"
-                        size={175}
-                      />
                       <ProjectVideo src={project.media} />
                     </div>
                     <div className="px-1">
@@ -233,10 +225,6 @@ function ProjectsSection({ variants, transition }: { variants: any, transition: 
             {PROJECTS.map((project) => (
               <div key={project.name} className="space-y-2">
                 <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                  <Spotlight
-                    className="from-[#FF5733] to-[#3357FF] blur-3xl dark:from-[#FF5733] dark:to-[#3357FF]"
-                    size={175}
-                  />
                   <ProjectVideo src={project.media} />
                 </div>
                 <div className="px-1">

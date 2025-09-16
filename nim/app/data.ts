@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
     name: 'Coffee Rest',
     description: 'Built an iOS app the uses CoreML to show users their recommended bedtime based on their coffee intake, desired sleep duration, and preferred wake up time.',
     link: 'https://github.com/MrTyler97/Coffee-Rest',
-    media:'/CoffeeRest.mp4',
+    media:'https://youtube.com/embed/OK-6LwEMW0M?autoplay=1&loop=1&playlist=OK-6LwEMW0M&mute=1&controls=0&modestbranding=1&rel=0',
     mediaType: 'video',
     id: 'project2',
   },
@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
       'An interactive way to manage files. Users can preview files, view basic information about them, and rename them by utilizing a context aware AI assistant.',
     link: 'https://cosc481w-2025winter.github.io/KeepOrDelete/',
     media:
-      'https://www.youtube.com/embed/eK3chz-iZYQ?autoplay=1&loop=1&playlist=eK3chz-iZYQ&mute=1',
+      'https://www.youtube.com/embed/eK3chz-iZYQ?autoplay=1&loop=1&playlist=eK3chz-iZYQ&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3',
     mediaType: 'video',
     id: 'project3',
   },
