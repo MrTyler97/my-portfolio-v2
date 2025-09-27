@@ -93,17 +93,17 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    title: 'Why Computer Science?',
+    description: 'What led me to pursue a career in software engineering.',
+    link: '/blog/why-computer-science',
+    uid: 'blog-1',
+  },
+  {
     title: 'Autonomus Drones, Yeast Cells, and Algorithms',
     description:
       'My various research experiences.',
     link: '/blog/my-various-research-experiences',
     uid: 'blog-3',
-  },
-  {
-    title: 'Why Computer Science?',
-    description: 'What led me to pursue a career in software engineering.',
-    link: '/blog/why-computer-science',
-    uid: 'blog-1',
   }
 ]
 
