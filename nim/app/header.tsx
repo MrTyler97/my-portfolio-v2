@@ -1,7 +1,7 @@
 'use client'
 import { TextEffect } from '@/components/ui/text-effect'
 import Link from 'next/link'
-import { TextShimmerWave } from '@/components/motion-primitives/text-shimmer-wave';
+import { TextScramble } from '@/components/motion-primitives/text-scramble';
 
 export function Header() {
   return (
@@ -11,18 +11,16 @@ export function Header() {
           Victor Tyler
         </Link>
         <div>
-        <TextShimmerWave
-      className='shimmer-custom'
-      duration={1}
-      spread={1}
-      zDistance={1}
-      scaleDistance={1.1}
-      rotateYDistance={20}
+        <TextScramble
+      className='font-mono text-sm'
+      duration={2.5}
+      speed={.05}
+      characterSet='01'
     >
       Software Engineer
-    </TextShimmerWave>
+    </TextScramble>
         </div>
       </div>
-    </header>
+    </header> 
   )
 }
