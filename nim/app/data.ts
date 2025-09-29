@@ -70,7 +70,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Software Engineer Intern',
     start: '2025',
     end: '2025',
-    link: 'https://www.honeywell.com/us/en',
+    link: 'https://www.honeywell.com/us/en/news/featured-stories/2025/08/impact-of-ai-and-data-collection-on-retail-transformation',
     id: 'work1',
   },
   {

@@ -13,8 +13,8 @@ export function Header() {
         <div>
         <TextScramble
       className='font-mono text-sm'
-      duration={2.5}
-      speed={.05}
+      duration={2}
+      speed={.025}
       characterSet='01'
     >
       Software Engineer
