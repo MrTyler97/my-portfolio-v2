@@ -31,14 +31,14 @@ type SocialLink = {
 export const PROJECTS: Project[] = [
     {
     name: 'Database Configuration Application',
-    description: 'Built a full-stack app that condenses database config workflows into a single interface, accelerating Honeywell`s trade show deployments by 75%',
+    description: 'Built a full-stack app that condenses database config workflows into a single interface, accelerating Honeywell`s trade show deployments by 75%.',
     media:'/Honeywell-Logo.wine.webp',
     mediaType: 'image',
     id: 'project1',
   },
    {
     name: 'Pastries',
-    description: 'A native iOS application that uses machine learning to identify, classify, and locate different types of pastries. Model has 92% testing accuracy',
+    description: 'A native iOS application that uses machine learning to identify, classify, and locate different types of pastries. Model has 92% testing accuracy.',
     link: 'https://github.com/MrTyler97/Pastries',
     media:'https://youtube.com/embed/Y7515-p1G78?autoplay=1&loop=1&playlist=Y7515-p1G78&mute=1&controls=0&modestbranding=1&rel=0',
     mediaType: 'video',
