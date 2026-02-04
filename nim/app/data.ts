@@ -67,11 +67,19 @@ export const PROJECTS: Project[] = [
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'Honeywell',
+    title: 'Software Engineer',
+    start: '2026',
+    end: 'Present',
+    link: 'https://www.honeywell.com/us/en/news/featured-stories/2025/08/impact-of-ai-and-data-collection-on-retail-transformation',
+    id: 'work1',
+  },
+  {
+    company: 'Honeywell',
     title: 'Software Engineer Intern',
     start: '2025',
     end: '2025',
     link: 'https://www.honeywell.com/us/en/news/featured-stories/2025/08/impact-of-ai-and-data-collection-on-retail-transformation',
-    id: 'work1',
+    id: 'work2',
   },
   {
     company: 'Eastern Michigan University',
@@ -79,14 +87,6 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start: '2024',
     end: '2025',
     link: 'https://eas-lab-emich.github.io/',
-    id: 'work2',
-  },
-  {
-    company: 'Eastern Michigan University',
-    title: 'Teaching Assistant',
-    start: '2023',
-    end: '2024',
-    link: 'https://www.emich.edu/computer-science/index.php',
     id: 'work3',
   },
 ]
